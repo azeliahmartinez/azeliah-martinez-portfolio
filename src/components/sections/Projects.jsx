@@ -1,14 +1,14 @@
 const projects = [
   {
-    title: "Paws & Passion",
-    stack: "Mobile App Testing • Bug Fixing • Documentation • Usability Review",
+    title: "Up2Face – Student Engagement Detection System",
+    stack: "HTML • CSS • JavaScript • Node.js • Python • MediaPipe • Random Forest",
     description:
-      "Contributed to the improvement of the Paws & Passion mobile application by testing features, identifying bugs, fixing issues, and documenting usability and functionality concerns.",
-    role: "Reviewed and improved key user flows such as booking, pet selection, and form behavior, then collaborated on debugging, issue resolution, and continuous functionality improvement.",
-    gradient: "pink-gradient",
-    video: "/paws-and-passion-video.mp4",
+      "Developed a web-based engagement detection system that analyzes recorded learning sessions using facial expressions and upper-body gestures to generate interpretable engagement insights.",
+    role: "Contributed to the development of the application workflow, interface, and analysis presentation, helping translate machine learning outputs into a user-friendly system with dashboards, visualizations, key frames, and downloadable results.",
+    gradient: "tech-gradient",
+    video: "/up2face-video.mp4",
     hasVideo: true,
-    mediaType: "mobile",
+    mediaType: "desktop",
   },
   {
     title: "Cofeed Web Platform",
@@ -31,6 +31,17 @@ const projects = [
     video: "/apoamf-video.mp4",
     hasVideo: true,
     mediaType: "desktop",
+  },
+  {
+    title: "Paws & Passion",
+    stack: "Mobile App Testing • Bug Fixing • Documentation • Usability Review",
+    description:
+      "Contributed to the improvement of the Paws & Passion mobile application by testing features, identifying bugs, fixing issues, and documenting usability and functionality concerns.",
+    role: "Reviewed and improved key user flows such as booking, pet selection, and form behavior, then collaborated on debugging, issue resolution, and continuous functionality improvement.",
+    gradient: "pink-gradient",
+    video: "/paws-and-passion-video.mp4",
+    hasVideo: true,
+    mediaType: "mobile",
   },
   {
     title: "Thynk Unlimited – UI/UX Prototype",
