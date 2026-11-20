@@ -20,7 +20,7 @@ export default function LazyVideo({ src, label }) {
           el.pause();
         }
       },
-      { threshold: 0.25 }
+        { rootMargin: "400px 0px", threshold: 0 }
     );
     io.observe(el);
     return () => io.disconnect();
@@ -35,7 +35,7 @@ export default function LazyVideo({ src, label }) {
           muted
           loop
           playsInline
-          preload="none"
+          preload="metadata"
           controls={false}
           onError={() => active && setFailed(true)}
           aria-label={label}
