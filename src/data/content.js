@@ -28,11 +28,11 @@ export const experience = [
     note: "6 months",
     role: "Automation Intern, Source-to-Pay",
     org: "Henkel Asia Pacific Services Centre, Automation & Q&CI Team",
-    body: "I joined planning to stay six weeks and stayed six months. I gathered requirements from the people doing the manual work, then designed, built, tested and documented tools to take that work off their plates: Python automations for email and invoice processing, a Power Apps solution for downpayment approvals, and a SharePoint hub for the team's tools.",
+    body: "I gathered requirements from the people doing the manual work, then designed, built, tested and documented tools to take that work off their plates: Python automations for email and invoice processing, a Power Apps solution for downpayment approvals, and a SharePoint hub for the team's tools.",
     impact: [
       { n: "~70%", text: "less time per invoice, from about 10 minutes to 3, after automating supplier invoice sorting" },
       { n: "700 min", text: "saved every month (0.09 FTE), validated through the company's continuous improvement review" },
-      { n: "5 regions", text: "testing the downpayment app in global UAT: APAC, IMEA, LATAM, North America and the EU" },
+            { n: "Global", text: "the downpayment app is being prepared for UAT with regions including APAC, IMEA, LATAM, North America and the EU" },
     ],
   },
   {
@@ -68,10 +68,10 @@ export const featured = [
     title: "Down Payments App",
     meta: "Henkel, 2026",
     kinds: ["automation", "web"],
-    video: "/dp-app-demo.mp4",
+    flow: ["request", "review", "approve", "PDF + XML", "invoice system"],
     desc: "A Power Apps application for requesting, approving and tracking downpayments, backed by SharePoint. Approved requests generate their documents and go straight to the invoice processing system.",
     mine: "I built the review-before-submit step, an approval path that sends multiple attachments at once, and a faster request search.",
-    tag: "in global UAT",
+    tag: "heading to global UAT",
     stack: ["Power Apps", "Power Fx", "SharePoint"],
   },
   {

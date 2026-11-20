@@ -340,3 +340,21 @@ h2 {
   .others li { grid-template-columns: minmax(0, 1fr); }
   .others .kind { text-align: left; }
 }
+
+/* ---------- flow diagram (used in place of a video) ---------- */
+.flow-media { display: flex; align-items: center; justify-content: center; padding: 24px; }
+.flow-media ol {
+  list-style: none; margin: 0; padding: 0; width: min(340px, 100%);
+  display: flex; flex-direction: column; gap: 10px;
+}
+.flow-media li {
+  display: flex; gap: 14px; align-items: center;
+  font-family: var(--mono); font-size: 14px; color: var(--muted);
+  background: var(--ink); border: 1px solid var(--line); padding: 9px 14px;
+  animation-name: flow-step; animation-iteration-count: infinite; animation-timing-function: linear;
+}
+.flow-media .num { color: var(--faint); font-size: 12px; }
+@keyframes flow-step {
+  0%, 18% { border-color: var(--pink); color: var(--text); box-shadow: inset 2px 0 var(--pink); }
+  22%, 100% { border-color: var(--line); color: var(--muted); box-shadow: none; }
+}

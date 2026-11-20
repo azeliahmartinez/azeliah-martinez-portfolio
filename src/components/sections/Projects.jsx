@@ -13,6 +13,24 @@ function Stack({ items }) {
   );
 }
 
+// Animated step-by-step flow, used instead of a video when the real
+// screens can't be shown publicly.
+function FlowMedia({ steps }) {
+  const cycle = steps.length * 0.8;
+  return (
+    <div className="media flow-media" aria-hidden="true">
+      <ol>
+        {steps.map((s, i) => (
+          <li key={s} style={{ animationDelay: `${i * 0.8}s`, animationDuration: `${cycle}s` }}>
+            <span className="num">{String(i + 1).padStart(2, "0")}</span>
+            {s}
+          </li>
+        ))}
+      </ol>
+    </div>
+  );
+}
+
 export default function Projects({ filter, setFilter }) {
   const feat = featured.filter((p) => matches(p, filter));
   const autos = automations.filter((p) => matches(p, filter));
@@ -44,7 +62,11 @@ export default function Projects({ filter, setFilter }) {
           <div>
             {feat.map((p) => (
               <article className="feat" id={p.id} key={p.id}>
-                <LazyVideo src={p.video} label={p.title + " demo"} />
+                {p.video ? (
+                  <LazyVideo src={p.video} label={p.title + " demo"} />
+                ) : (
+                  <FlowMedia steps={p.flow} />
+                )}
                 <div>
                   <h3>{p.title}</h3>
                   <div className="meta">{p.meta}</div>
