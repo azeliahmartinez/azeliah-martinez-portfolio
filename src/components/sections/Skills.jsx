@@ -1,58 +1,35 @@
+import { skills } from "../../data/content";
+
+// Renders the skills object as a syntax-colored skills.json file.
 export default function Skills() {
-  const skillGroups = [
-    {
-      title: "Frontend Development",
-      items: ["HTML", "CSS", "JavaScript", "JSON"],
-    },
-    {
-      title: "Programming",
-      items: ["C", "Java", "Python"],
-    },
-    {
-      title: "Database",
-      items: ["SQL", "Database Design", "Database Management"],
-    },
-    {
-      title: "UI/UX & Prototyping",
-      items: ["Figma", "LucidChart", "Canva", "UI/UX Design"],
-    },
-    {
-      title: "Testing & Documentation",
-      items: ["Software Testing", "Debugging", "Documentation", "QA Testing"],
-    },
-    {
-      title: "Tools & Workflow",
-      items: ["Git", "GitHub", "Agile", "Scrum", "Jupyter Notebook", "AWS Fundamentals"],
-    },
-  ];
+  const entries = Object.entries(skills);
 
   return (
-    <section id="skills" className="section">
-      <div className="container">
-        <div className="section-title">
-          <span className="section-kicker">Skills</span>
-          <h2>Technical skills</h2>
-          <p>
-            A growing toolkit built through academic work, hands-on projects,
-            UI/UX design, testing, and collaborative software development.
-          </p>
-        </div>
+    <section id="skills">
+      <p className="path">
+        ~/<b>skills.json</b>
+      </p>
+      <h2>What I work with</h2>
 
-        <div className="skills-groups">
-          {skillGroups.map((group) => (
-            <div className="glass-card skill-group-card" key={group.title}>
-              <h3>{group.title}</h3>
-
-              <div className="skills-wrap">
-                {group.items.map((item) => (
-                  <span className="skill-chip" key={item}>
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </div>
+      <div className="code">
+        <div className="code-bar">skills.json</div>
+        <pre>
+          <span className="row">{"{"}</span>
+          {entries.map(([key, list], i) => (
+            <span className="row" key={key}>
+              {"  "}
+              <span className="k">"{key}"</span>: [
+              {list.map((item, j) => (
+                <span key={item}>
+                  <span className="s">"{item}"</span>
+                  {j < list.length - 1 ? ", " : ""}
+                </span>
+              ))}
+              ]{i < entries.length - 1 ? "," : ""}
+            </span>
           ))}
-        </div>
+          <span className="row">{"}"}</span>
+        </pre>
       </div>
     </section>
   );
